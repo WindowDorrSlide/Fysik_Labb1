@@ -1,0 +1,244 @@
+\documentclass[11p, titlepage, oneside, a4paper]{article}
+% Packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[english,swedish]{babel}
+\usepackage[
+    backend=biber,
+    style=authoryear-ibid,
+    sorting=ynt
+]{biblatex}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%Källor
+\addbibresource{mall.bib}
+\graphicspath{ {./images/} }
+
+% Ändra de rader som behöver ändras
+\def\inst{Teknikprogrammet}
+\def\typeofdoc{Laborationsrapport}
+\def\course{Fysik 1 150p}
+\def\pretitle{Laboration 1}
+\def\title{Rörelse: Hastighet och acceleration}
+\def\name{Magnus Silverdal}
+\def\username{magnus.silverdal}
+\def\email{\username{}@ga.ntig.se}
+\def\graders{Magnus Silverdal}
+
+\begin{document}
+
+\begin{titlepage}
+		\thispagestyle{empty}
+		\begin{large}
+			\begin{tabular}{@{}p{\textwidth}@{}}
+				\textbf{NTI gymnasiet \hfill \today} \\
+				\textbf{\inst} \\
+				\textbf{\typeofdoc} \\
+			\end{tabular}
+		\end{large}
+		\vspace{10mm}
+		\begin{center}
+			\LARGE{\pretitle} \\
+			\huge{\textbf{\course}}\\
+			\vspace{10mm}
+			\LARGE{\title} \\
+			\vspace{15mm}
+			\begin{large}
+				\begin{tabular}{ll}
+					\textbf{Namn} & \name \\
+					\textbf{E-mail} & \texttt{\email} \\
+				\end{tabular}
+			\end{large}
+			\vfill
+            \includegraphics[width=0.5\textwidth]{images/NTI Gymnasiet_Symbol_print_svart}
+			\vfill
+            \large{\textbf{Handledare}}\\
+			\mbox{\large{\graders}}
+		\end{center}
+	\end{titlepage}
+
+    \begin{otherlanguage}{english}
+	\begin{abstract}
+        This labb examines the change over velocity and acceleration of a wagon rolling down a slope. The experiment
+        shows that the wagons velocity changes at a constant rate making the acceleration a constant linear line.
+    \end{abstract}
+    \end{otherlanguage}
+    % Om arbetet är långt har det en innehållsförteckning, annars kan den utelämnas
+	\pagenumbering{roman}
+	\tableofcontents
+	
+	% och lägger in en sidbrytning
+	\newpage
+
+	\pagenumbering{arabic}
+	
+	% i Sverige har vi normalt inget indrag vid nytt stycke
+	\setlength{\parindent}{0pt}
+	% men däremot lite mellanrum
+	\setlength{\parskip}{10pt}
+	
+	\section{Syfte och frågeställning}
+		Syftet med laborationen är att analysera rörelse för en vagn som rullar längs en bana och beräkna hastighet och
+        acceleration under rörelsen.
+
+	\section{Bakgrund och teori}
+        Med utgångspunkt från en film av förloppet kan mjukvara för motion tracking utnyttjas för att få fram vagnens
+        position vid olika tidpunkter. Denna information används sedan tillsammans med definitionerna av medelhastighet
+        $v_m = \frac{\Delta s}{\Delta t}$ och medelacceleration $a_m = \frac{\Delta v}{\Delta t}$ för att beräkna ett approximativt värde
+        för hastigheten och accelerationen som funktion av tiden. Med ett tillräckligt kort tidssteg så blir medelvärdet
+        ungefär lika med momentanvärdet och i filmen är tidssteget som störst $\frac{1}{25}$ sekund.  \parencite{impuls}
+	
+
+	\section{Metod och materiel}
+        \begin{enumerate}
+            \item Vagn
+            \item Lutande plan med ställning
+            \item Linjal
+            \item Kamera
+            \item Dator
+        \end{enumerate}
+        
+        Det lutande planet monteras på ställningen så att den ena änden är rund 5 cm över bordet, se figur\ref{fig
+:lutandeplan}.
+        Linjalen placeras längs planet så att det finns en längdskala  i filmen.
+        Kameran placeras stadigt, mittemot uppställningen, på ett avstånd så att hela rörelsen ryms i filmen utan att
+        kameran behöver flyttas.
+        Vagnen rullas sedan nedför planet samtidigt som kameran filmar rörelsen.
+        Försöket placeras så att ljusförhållanden och bakgrund ger en så tydlig och skarp film som möjligt.
+        
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.8\textwidth]{images/lutandePlan}
+            \caption{Uppbyggnad av lutande plan}
+            \label{fig:lutandeplan}
+        \end{figure}
+
+	\section{Analys och beräkning}
+    Filmen analyserades sedan med mjukvaran Tracker för att få fram en tabell med positionen som funktion av
+    tiden. Denna data presenteras i tabell \ref{table:result}. Tabellen illustreras i Figur \ref{fig:sträcka} med sträcka
+    som funktion av tiden.
+
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=0.8\textwidth]{images/sträcka}
+        \caption{Distans över Tid tabell i Excel}
+        \label{fig:sträcka}
+    \end{figure}
+        
+
+    Datan importeras i Excel och hastigheten beräknas med hjälp av formeln
+    \begin{equation}
+        v_m = \frac{\Delta s}{\Delta t}
+    \label{eq:medelhastighet}
+    \end{equation}
+    
+    \section{Slutsats och resultat} 
+        Resultatet av beräkningarna illustreras i Figurerna\ref{fig:hastighet} och \ref{fig:acceleration}.
+
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.8\textwidth]{images/hastighet}
+            \caption{Hastighet över Tid tabell i Excel}
+            \label{fig:hastighet}
+        \end{figure}
+
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.8\textwidth]{images/acceleration}
+            \caption{Acceleration över Tid tabell i Excel}
+            \label{fig:acceleration}
+        \end{figure}
+
+
+    \section{Diskussion}
+
+
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width=0.8\textwidth]{images/DistansHastighet}
+            \caption{Distans och Hastighet i Excel}
+            \label{fig:distanshastighet}
+        \end{figure}
+
+
+
+
+
+
+    \begin{table}
+            \begin{center}
+            \begin{tabular}{ |c|c| }
+            \hline
+            Position (m) & Tid (s)  \\
+            \hline
+                0.00 & 0.00 \\
+                1.10E+00 & 3.89E-04 \\
+                1.13E+00 & 7.41E-04 \\
+                1.16E+00 & 2.40E-03 \\
+                1.19E+00 & 4.27E-03 \\
+                1.23E+00 & 6.35E-03 \\
+                1.26E+00 & 8.56E-03 \\
+                1.31E+00 & 1.11E-02 \\
+                1.34E+00 & 1.39E-02 \\
+                1.37E+00 & 1.67E-02 \\
+                1.40E+00 & 1.99E-02 \\
+                1.43E+00 & 2.32E-02 \\
+                1.47E+00 & 2.68E-02 \\
+                1.50E+00 & 3.11E-02 \\
+                1.53E+00 & 3.57E-02 \\
+                1.56E+00 & 4.08E-02 \\
+                1.59E+00 & 4.64E-02 \\
+                1.64E+00 & 5.26E-02 \\
+                1.67E+00 & 5.91E-02 \\
+                1.71E+00 & 6.60E-02 \\
+                1.74E+00 & 7.35E-02 \\
+                1.77E+00 & 8.17E-02 \\
+                1.80E+00 & 9.01E-02 \\
+                1.83E+00 & 9.90E-02 \\
+                1.87E+00 & 1.08E-01 \\
+                1.90E+00 & 1.18E-01 \\
+                1.93E+00 & 1.28E-01 \\
+                1.96E+00 & 1.38E-01 \\
+                2.01E+00 & 1.49E-01 \\
+                2.04E+00 & 1.60E-01 \\
+                2.07E+00 & 1.72E-01 \\
+                2.11E+00 & 1.84E-01 \\
+                2.14E+00 & 1.96E-01 \\
+                2.17E+00 & 2.08E-01 \\
+                2.20E+00 & 2.21E-01 \\
+                2.23E+00 & 2.34E-01 \\
+                2.27E+00 & 2.48E-01 \\
+                2.30E+00 & 2.61E-01 \\
+                2.35E+00 & 2.75E-01 \\
+                2.38E+00 & 2.89E-01 \\
+                2.41E+00 & 3.04E-01 \\
+                2.44E+00 & 3.19E-01 \\
+                2.47E+00 & 3.35E-01 \\
+                2.51E+00 & 3.49E-01 \\
+                2.54E+00 & 3.67E-01 \\
+                2.57E+00 & 3.83E-01 \\
+                2.60E+00 & 4.00E-01 \\
+                2.63E+00 & 4.16E-01 \\
+                2.67E+00 & 4.33E-01 \\
+                2.71E+00 & 4.48E-01 \\
+                2.75E+00 & 4.64E-01 \\
+                2.78E+00 & 4.82E-01 \\
+                2.81E+00 & 4.99E-01 \\
+                2.84E+00 & 5.17E-01 \\
+                2.87E+00 & 5.35E-01 \\
+                2.91E+00 & 5.54E-01 \\
+                2.94E+00 & 5.73E-01 \\
+            \vdots & \vdots \\
+            \hline
+            \end{tabular}
+            \caption{Mätvärden}
+            \label{table:result}
+            \end{center}
+        \end{table}
+
+    
+    \printbibliography
+
+\end{document}
+
