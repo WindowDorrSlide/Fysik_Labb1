@@ -18,7 +18,7 @@
 % Ändra de rader som behöver ändras
 \def\inst{Teknikprogrammet}
 \def\typeofdoc{Laborationsrapport}
-\def\course{Fysik 1 150p}
+\def\course{Fysik-1 150p}
 \def\pretitle{Laboration 1}
 \def\title{Rörelse: Hastighet och acceleration}
 \def\name{Magnus Silverdal}
@@ -60,8 +60,8 @@
 
     \begin{otherlanguage}{english}
 	\begin{abstract}
-        This labb examines the change over velocity and acceleration of a wagon rolling down a slope. The experiment
-        shows that the wagons velocity changes at a constant rate making the acceleration a constant linear line.
+        This labb examines the change over velocity and acceleration of a wagon rolling down a slope.
+        The experiment shows that the wagons velocity changes at a constant rate making the acceleration a constant linear line.
     \end{abstract}
     \end{otherlanguage}
     % Om arbetet är långt har det en innehållsförteckning, annars kan den utelämnas
@@ -84,10 +84,10 @@
 
 	\section{Bakgrund och teori}
         Med utgångspunkt från en film av förloppet kan mjukvara för motion tracking utnyttjas för att få fram vagnens
-        position vid olika tidpunkter. Denna information används sedan tillsammans med definitionerna av medelhastighet
-        $v_m = \frac{\Delta s}{\Delta t}$ och medelacceleration $a_m = \frac{\Delta v}{\Delta t}$ för att beräkna ett approximativt värde
-        för hastigheten och accelerationen som funktion av tiden. Med ett tillräckligt kort tidssteg så blir medelvärdet
-        ungefär lika med momentanvärdet och i filmen är tidssteget som störst $\frac{1}{25}$ sekund.  \parencite{impuls}
+        position vid olika tidpunkter.
+        Denna information används sedan tillsammans med definitionerna av medelhastighet $v_m = \frac{\Delta s}{\Delta t}$ och medelacceleration $a_m = \frac{\Delta v}{\Delta t}$ för att beräkna ett approximativt värde
+        för hastigheten och accelerationen som funktion av tiden.
+        Med ett tillräckligt kort tidssteg så blir medelvärdet ungefär lika med momentanvärdet och i filmen är tidssteget som störst $\frac{1}{25}$ sekund.  \parencite{impuls}
 	
 
 	\section{Metod och materiel}
@@ -99,8 +99,7 @@
             \item Dator
         \end{enumerate}
         
-        Det lutande planet monteras på ställningen så att den ena änden är rund 5 cm över bordet, se figur\ref{fig
-:lutandeplan}.
+        Det lutande planet monteras på ställningen så att den ena änden är rund 5 cm över bordet, se figur\ref{fig:lutandeplan}.
         Linjalen placeras längs planet så att det finns en längdskala  i filmen.
         Kameran placeras stadigt, mittemot uppställningen, på ett avstånd så att hela rörelsen ryms i filmen utan att
         kameran behöver flyttas.
@@ -116,14 +115,15 @@
 
 	\section{Analys och beräkning}
     Filmen analyserades sedan med mjukvaran Tracker för att få fram en tabell med positionen som funktion av
-    tiden. Denna data presenteras i tabell \ref{table:result}. Tabellen illustreras i Figur \ref{fig:sträcka} med sträcka
-    som funktion av tiden.
+    tiden.
+    Denna data presenteras i tabell\ref{table:result}.
+    Tabellen illustreras i Figur\ref{fig:stracka} med sträckan som funktion av tiden.
 
     \begin{figure}[!h]
         \centering
         \includegraphics[width=0.8\textwidth]{images/sträcka}
         \caption{Distans över Tid tabell i Excel}
-        \label{fig:sträcka}
+        \label{fig:stracka}
     \end{figure}
         
 
@@ -134,7 +134,8 @@
     \end{equation}
     
     \section{Slutsats och resultat} 
-        Resultatet av beräkningarna illustreras i Figurerna\ref{fig:hastighet} och \ref{fig:acceleration}.
+        Resultatet av beräkningarna illustreras i Figurerna\ref{fig:hastighet} och\ref{fig:acceleration}.
+Hastigheten är linjärt och vagnen accelererar med circa $0.1m/s^2$.
 
         \begin{figure}[!h]
             \centering
@@ -152,6 +153,14 @@
 
 
     \section{Diskussion}
+        Resultatet som presenteras kan anses trovärdig även om accelerationen och hastigheten variera mycket. En
+        anledning till detta kan vara kamerans hastighet.
+        När vagnen rör sig ner för planet kan det vara att den mellan två bilder ha rört sig lite mer än mellan två
+        andra.
+        Denna liten skillnad i distansen amplifieras sedan vid beräkningen av hastigheten samt acceleration.
+        I figur\ref{fig:distanshastighet} syns att ojämnheterna i distansen ligger vid samma ställe där hastigheten variera.
+        I samma figur syns även en trendlinje för både Distansen och Hastigheten.
+        Båda trendlinjer är parallela med varandra vilket även validerar att hastighetens funktion kan anses vara riktig då hastigheten är en funktion av distansen över tid.
 
 
         \begin{figure}[!h]
